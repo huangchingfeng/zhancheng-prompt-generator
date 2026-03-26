@@ -64,6 +64,30 @@
         .tool-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
         .tool-link { background: rgba(245,158,11,0.15); padding: 4px 12px; border-radius: 16px; font-size: 0.8rem; color: #92400e; text-decoration: none; border: 1px solid rgba(245,158,11,0.3); }
         .tool-link:hover { background: rgba(245,158,11,0.3); color: #78350f; }
+        .gem-card { background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%); border-radius: var(--card-radius); padding: 20px; margin-bottom: 16px; color: white; }
+        .gem-card h5 { color: var(--primary); font-weight: 700; margin-bottom: 16px; }
+        .gem-item { display: flex; align-items: flex-start; gap: 12px; padding: 12px; background: rgba(255,255,255,0.08); border-radius: 10px; margin-bottom: 10px; transition: background 0.2s; }
+        .gem-item:hover { background: rgba(255,255,255,0.15); }
+        .gem-item a { color: var(--primary); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
+        .gem-item a:hover { text-decoration: underline; }
+        .gem-item p { color: rgba(255,255,255,0.7); font-size: 0.85rem; margin: 4px 0 0 0; }
+        .gem-icon { font-size: 1.5rem; flex-shrink: 0; }
+        .instructor-section { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); color: white; border-radius: var(--card-radius); padding: 40px 30px; margin-top: 40px; position: relative; overflow: hidden; }
+        .instructor-section::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle at 70% 30%, rgba(245,158,11,0.1) 0%, transparent 50%); }
+        .instructor-section * { position: relative; }
+        .instructor-section h3 { color: var(--primary); font-weight: 800; margin-bottom: 20px; }
+        .instructor-section .title { font-size: 1.3rem; font-weight: 700; margin-bottom: 4px; }
+        .instructor-section .subtitle { color: rgba(255,255,255,0.7); font-size: 0.95rem; margin-bottom: 16px; }
+        .exp-list { list-style: none; padding: 0; }
+        .exp-list li { padding: 4px 0; font-size: 0.9rem; color: rgba(255,255,255,0.85); }
+        .exp-list li::before { content: '✦ '; color: var(--primary); }
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 20px; }
+        .contact-item { background: rgba(255,255,255,0.08); padding: 14px 16px; border-radius: 10px; text-align: center; }
+        .contact-item a { color: var(--primary); text-decoration: none; font-weight: 600; }
+        .contact-item a:hover { text-decoration: underline; }
+        .contact-item .label { font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-bottom: 4px; }
+        .client-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+        .client-tag { background: rgba(245,158,11,0.15); border: 1px solid rgba(245,158,11,0.3); padding: 3px 10px; border-radius: 12px; font-size: 0.78rem; color: rgba(255,255,255,0.7); }
     </style>
 </head>
 <body>
@@ -107,6 +131,39 @@
                     </div>
                 </div>
 
+                <!-- 展晟專屬 AI 工具 -->
+                <div class="gem-card">
+                    <h5><i class="bi bi-stars me-2"></i>展晟照明專屬 AI 工具（上午實戰成果）</h5>
+                    <div class="gem-item">
+                        <span class="gem-icon">🏗️</span>
+                        <div>
+                            <a href="https://gemini.google.com/share/b79bb98e051f" target="_blank">照明設計與排版工具</a>
+                            <p>快速生成照明設計方案、空間配置圖與排版建議，協助設計師和業務製作專業提案文件</p>
+                        </div>
+                    </div>
+                    <div class="gem-item">
+                        <span class="gem-icon">🌿</span>
+                        <div>
+                            <a href="https://gemini.google.com/share/f226bbe61b9e" target="_blank">節能減碳分析工具</a>
+                            <p>計算 LED 換裝的節能效益、碳排減量數據，產出可用於 ESG 報告的專業分析</p>
+                        </div>
+                    </div>
+                    <div class="gem-item">
+                        <span class="gem-icon">⚡</span>
+                        <div>
+                            <a href="https://gemini.google.com/share/e69803141b31" target="_blank">照明驅動器智能配對</a>
+                            <p>根據燈具規格智能推薦匹配的驅動器型號，避免配對錯誤導致的工程問題</p>
+                        </div>
+                    </div>
+                    <div class="gem-item">
+                        <span class="gem-icon">📊</span>
+                        <div>
+                            <a href="https://docs.google.com/document/d/1T0uLSYR9QqA4h-z3X2Ngx1h8o3WNueLaZ1zcF2ztUDw/edit?tab=t.0" target="_blank">進銷診斷 AI 提示詞（v4.2）</a>
+                            <p>展晟照明×經銷商 AI 進貨診斷系統，分析進貨數據產出一頁式經營診斷報告，含 ABC 分析、關聯銷售、採購效率診斷、市場趨勢比對</p>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="card">
                     <div class="card-header bg-white p-3">
                         <h5 class="mb-2"><i class="bi bi-people me-2"></i>1. 選擇分組</h5>
@@ -136,7 +193,95 @@
             </div>
         </div>
 
-        <div class="footer mt-5">
+        <!-- 講師介紹 -->
+        <div class="row justify-content-center mt-4">
+            <div class="col-lg-10">
+                <div class="instructor-section">
+                    <h3><i class="bi bi-person-badge me-2"></i>講師介紹</h3>
+                    <div class="title">黃敬峰（阿峰老師／AI峰哥）</div>
+                    <div class="subtitle">企業 AI 實戰培訓專家｜讓每個人都會用 AI 解決工作問題</div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <h6 style="color:var(--primary);font-weight:700;">現職</h6>
+                            <ul class="exp-list">
+                                <li>交點文化股份有限公司 負責人</li>
+                                <li>台灣・馬來西亞・香港 AI 講師</li>
+                                <li>Google Gemini 認證講師</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <h6 style="color:var(--primary);font-weight:700;">教學實績</h6>
+                            <ul class="exp-list">
+                                <li>超過 1,000 小時 AI 工作坊經驗</li>
+                                <li>累計服務超過 300 間企業</li>
+                                <li>教學理念：會用、懂用、好用、每天用</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <h6 style="color:var(--primary);font-weight:700;">公部門授課經歷</h6>
+                            <ul class="exp-list">
+                                <li>行政院數位發展部</li>
+                                <li>行政院勞動力發展署</li>
+                                <li>經濟部能源署</li>
+                                <li>高雄市政府／社會局／文化局</li>
+                                <li>國立美術館、中華民國海洋委員會</li>
+                                <li>新竹市衛生局、嘉義縣政府</li>
+                                <li>財團法人中衛發展中心</li>
+                                <li>紡織產業綜合研究所、世新大學</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <h6 style="color:var(--primary);font-weight:700;">企業授課經歷</h6>
+                            <ul class="exp-list">
+                                <li>台灣理光、華碩電腦</li>
+                                <li>南山人壽、新加坡商蝦皮</li>
+                                <li>歐德傢俱、裕隆日產</li>
+                                <li>順益集團、南都汽車集團（Toyota 經銷商）</li>
+                                <li>日商 TOTO、雅丰連鎖醫美診所</li>
+                                <li>Happy Hair 連鎖髮廊</li>
+                                <li>全家便利商店</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <h6 style="color:var(--primary);font-weight:700;">公職經歷</h6>
+                        <ul class="exp-list">
+                            <li>行政院青年諮詢委員會 第 1/2 屆副召集人</li>
+                            <li>新北市青年事務委員會 第 1/2 屆委員</li>
+                        </ul>
+                    </div>
+
+                    <hr style="border-color:rgba(255,255,255,0.15);margin:24px 0;">
+
+                    <h6 style="color:var(--primary);font-weight:700;margin-bottom:12px;">聯絡資訊 & 社群</h6>
+                    <div class="contact-grid">
+                        <div class="contact-item">
+                            <div class="label">官方網站</div>
+                            <a href="https://www.autolab.cloud" target="_blank"><i class="bi bi-globe me-1"></i>www.autolab.cloud</a>
+                        </div>
+                        <div class="contact-item">
+                            <div class="label">部落格</div>
+                            <a href="https://blog.autolab.cloud" target="_blank"><i class="bi bi-journal-text me-1"></i>blog.autolab.cloud</a>
+                        </div>
+                        <div class="contact-item">
+                            <div class="label">Email</div>
+                            <a href="mailto:ai@autolab.cloud"><i class="bi bi-envelope me-1"></i>ai@autolab.cloud</a>
+                        </div>
+                        <div class="contact-item">
+                            <div class="label">手機 / LINE</div>
+                            <a href="tel:0976715102"><i class="bi bi-line me-1"></i>0976-715-102</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer mt-4">
             <p>展晟照明股份有限公司｜經銷商 AI 實戰工作坊｜2026.03.26</p>
             <p>講師：<a href="https://www.autolab.cloud" target="_blank">黃敬峰（阿峰老師）</a>｜<a href="mailto:ai@autolab.cloud">ai@autolab.cloud</a></p>
         </div>
