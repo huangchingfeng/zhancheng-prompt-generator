@@ -123,6 +123,14 @@
         .footer a:hover { text-decoration: underline; }
         /* Brand divider */
         .brand-divider { height: 3px; background: var(--gradient-orange); border-radius: 2px; margin: 0 auto; width: 60px; }
+        /* Slides embed */
+        .slides-card { background: white; border-radius: var(--card-radius); box-shadow: var(--card-shadow); border: 1px solid rgba(27,45,92,0.1); overflow: hidden; margin-bottom: 16px; }
+        .slides-card .slides-header { background: var(--gradient-navy); padding: 16px 20px; color: white; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+        .slides-card .slides-header h5 { margin: 0; color: var(--brand-gold); font-weight: 700; }
+        .slides-card .slides-header a { color: rgba(255,255,255,0.7); font-size: 0.85rem; text-decoration: none; }
+        .slides-card .slides-header a:hover { color: var(--brand-gold); }
+        .slides-card .slides-body { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
+        .slides-card .slides-body iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
     </style>
 </head>
 <body>
@@ -203,6 +211,17 @@
                             <a href="https://docs.google.com/document/d/1T0uLSYR9QqA4h-z3X2Ngx1h8o3WNueLaZ1zcF2ztUDw/edit?tab=t.0" target="_blank">進銷診斷 AI 提示詞（v4.2）</a>
                             <p>展晟照明×經銷商 AI 進貨診斷系統，分析進貨數據產出一頁式經營診斷報告，含 ABC 分析、關聯銷售、採購效率診斷、市場趨勢比對</p>
                         </div>
+                    </div>
+                </div>
+
+                <!-- 課程簡報內嵌 -->
+                <div class="slides-card">
+                    <div class="slides-header">
+                        <h5><i class="bi bi-easel me-2"></i>下午課程簡報</h5>
+                        <a href="https://docs.google.com/presentation/d/1rSrUFm8Uux7_IOVP_A5UZaD6-dzN4-4kYX48IFm_WPE/edit" target="_blank"><i class="bi bi-box-arrow-up-right me-1"></i>開啟完整簡報</a>
+                    </div>
+                    <div class="slides-body">
+                        <iframe src="https://docs.google.com/presentation/d/1rSrUFm8Uux7_IOVP_A5UZaD6-dzN4-4kYX48IFm_WPE/embed?start=false&loop=false&delayms=5000" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
                     </div>
                 </div>
 
