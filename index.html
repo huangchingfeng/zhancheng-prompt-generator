@@ -131,6 +131,32 @@
         .slides-card .slides-header a:hover { color: var(--brand-gold); }
         .slides-card .slides-body { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
         .slides-card .slides-body iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+        /* Course Summary */
+        .summary-section { background: white; border-radius: var(--card-radius); box-shadow: var(--card-shadow); border: 1px solid rgba(27,45,92,0.1); overflow: hidden; margin-bottom: 16px; }
+        .summary-header { background: var(--gradient-navy); padding: 20px 24px; color: white; }
+        .summary-header h5 { margin: 0; color: var(--brand-gold); font-weight: 700; }
+        .summary-header p { margin: 4px 0 0; color: rgba(255,255,255,0.6); font-size: 0.85rem; }
+        .summary-body { padding: 24px; }
+        .quote-card { background: linear-gradient(135deg, #FFFBF5 0%, #FFF8EE 100%); border-left: 4px solid var(--brand-orange); padding: 16px 20px; border-radius: 0 10px 10px 0; margin-bottom: 12px; font-size: 0.95rem; color: var(--brand-navy); line-height: 1.6; }
+        .quote-card .quote-text { font-weight: 600; font-size: 1rem; }
+        .quote-card .quote-note { color: rgba(27,45,92,0.55); font-size: 0.82rem; margin-top: 4px; }
+        .tool-step { display: flex; gap: 14px; padding: 16px; background: #F8FAFC; border-radius: 10px; margin-bottom: 10px; border: 1px solid rgba(27,45,92,0.06); }
+        .tool-step .step-num { flex-shrink: 0; width: 36px; height: 36px; background: var(--gradient-orange); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 800; font-size: 0.9rem; }
+        .tool-step .step-body h6 { margin: 0 0 4px; color: var(--brand-navy); font-weight: 700; font-size: 0.95rem; }
+        .tool-step .step-body p { margin: 0; color: rgba(27,45,92,0.65); font-size: 0.85rem; line-height: 1.5; }
+        .tool-step .step-body .tool-tag { display: inline-block; background: rgba(232,116,12,0.1); color: var(--brand-orange); font-size: 0.75rem; padding: 2px 8px; border-radius: 10px; font-weight: 600; margin-top: 4px; }
+        .key-concept { background: var(--gradient-navy); color: white; padding: 20px; border-radius: 10px; margin-bottom: 12px; }
+        .key-concept h6 { color: var(--brand-gold); font-weight: 700; margin-bottom: 10px; font-size: 0.95rem; }
+        .key-concept ul { list-style: none; padding: 0; margin: 0; }
+        .key-concept li { padding: 5px 0; font-size: 0.88rem; color: rgba(255,255,255,0.8); }
+        .key-concept li::before { content: ''; display: inline-block; width: 6px; height: 6px; background: var(--brand-gold); border-radius: 50%; margin-right: 8px; vertical-align: middle; }
+        .summary-divider { height: 2px; background: linear-gradient(90deg, var(--brand-orange) 0%, var(--brand-gold) 50%, transparent 100%); border-radius: 2px; margin: 20px 0; }
+        .rce-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 12px 0; }
+        .rce-item { text-align: center; padding: 16px 12px; background: var(--brand-orange-light); border-radius: 10px; border: 1px solid rgba(232,116,12,0.2); }
+        .rce-item .rce-icon { font-size: 1.8rem; margin-bottom: 4px; }
+        .rce-item .rce-label { font-weight: 800; color: var(--brand-orange); font-size: 1.1rem; }
+        .rce-item .rce-desc { font-size: 0.8rem; color: rgba(27,45,92,0.6); margin-top: 2px; }
+        @media (max-width: 576px) { .rce-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -177,7 +203,7 @@
                         <a href="https://notebooklm.google.com" target="_blank" class="tool-link">NotebookLM</a>
                         <a href="https://claude.ai/public/artifacts/1e2a5e60-3db6-4682-99ca-c04ae859f9cb" target="_blank" class="tool-link">黃金提示詞優化師</a>
                         <a href="https://claude.ai/public/artifacts/16f4d020-0781-463f-a972-7c496215aca5" target="_blank" class="tool-link">Nano Banana 圖像詠唱師</a>
-                        <a href="https://gemini.google.com/share/417f38a9a619" target="_blank" class="tool-link">引導式學習</a>
+                        <a href="https://gemini.google.com/gem/1XINBFHWZZVLLSsuF_GQmixmZ4luaTESR?usp=sharing" target="_blank" class="tool-link">引導式學習</a>
                     </div>
                 </div>
 
@@ -222,6 +248,168 @@
                     </div>
                     <div class="slides-body">
                         <iframe src="https://docs.google.com/presentation/d/1rSrUFm8Uux7_IOVP_A5UZaD6-dzN4-4kYX48IFm_WPE/embed?start=false&loop=false&delayms=5000" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                    </div>
+                </div>
+
+                <!-- 課程重點回顧 -->
+                <div class="summary-section">
+                    <div class="summary-header">
+                        <h5><i class="bi bi-journal-bookmark me-2"></i>下午課程重點回顧</h5>
+                        <p>2026/3/26 下午場｜阿峰老師帶你掌握 6 大 AI 工具的實戰心法</p>
+                    </div>
+                    <div class="summary-body">
+
+                        <!-- 核心觀念 -->
+                        <h6 style="color:var(--brand-navy);font-weight:700;margin-bottom:12px;"><i class="bi bi-lightbulb me-2" style="color:var(--brand-orange);"></i>核心觀念：你是機長，AI 是你的機組人員</h6>
+                        <div class="quote-card">
+                            <div class="quote-text">「人類是機長，AI 是機組人員。你要了解你的副駕駛、你的空服員，善用它、使用它、了解團隊的強項跟優勢在哪裡。」</div>
+                            <div class="quote-note">就像駕駛飛機一樣，人類不會把生命完全交給 AI，但一定要了解團隊中每個成員的能力</div>
+                        </div>
+
+                        <div class="summary-divider"></div>
+
+                        <!-- 下指令三關鍵 -->
+                        <h6 style="color:var(--brand-navy);font-weight:700;margin-bottom:12px;"><i class="bi bi-key me-2" style="color:var(--brand-orange);"></i>下指令三關鍵：學會這三個，贏過台灣 80% 的人</h6>
+                        <div class="rce-grid">
+                            <div class="rce-item">
+                                <div class="rce-icon">🎭</div>
+                                <div class="rce-label">角色</div>
+                                <div class="rce-desc">讓 AI 扮演你需要的專家<br>經驗年資寫 40 年起跳</div>
+                            </div>
+                            <div class="rce-item">
+                                <div class="rce-icon">🎬</div>
+                                <div class="rce-label">情境</div>
+                                <div class="rce-desc">告訴 AI 事情的前因後果<br>誰、什麼時候、在哪裡、要什麼</div>
+                            </div>
+                            <div class="rce-item">
+                                <div class="rce-icon">🎯</div>
+                                <div class="rce-label">期望</div>
+                                <div class="rce-desc">明確告訴 AI 要產出什麼<br>格式、字數、語言、難度</div>
+                            </div>
+                        </div>
+                        <div class="quote-card" style="border-left-color:var(--brand-sky);">
+                            <div class="quote-text">「把 AI 當人來互動。你不會跟旅行社講『日本三天兩夜安排』，你會告訴他帶誰去、什麼時候、喜歡什麼。AI 也一樣。」</div>
+                        </div>
+
+                        <div class="summary-divider"></div>
+
+                        <!-- 六大工具 -->
+                        <h6 style="color:var(--brand-navy);font-weight:700;margin-bottom:12px;"><i class="bi bi-tools me-2" style="color:var(--brand-orange);"></i>今天學到的 AI 工具一覽</h6>
+
+                        <div class="tool-step">
+                            <div class="step-num">1</div>
+                            <div class="step-body">
+                                <h6>ChatGPT / Gemini — 大型語言模型</h6>
+                                <p>用「角色 × 情境 × 期望」下指令，像跟人溝通一樣自然。記得：ChatGPT 中文資料只佔 0.7%，用英文問效果更好。有新主題就開新對話，避免 AI 搞混。</p>
+                                <span class="tool-tag">文字生成</span> <span class="tool-tag">資料分析</span>
+                            </div>
+                        </div>
+
+                        <div class="tool-step">
+                            <div class="step-num">2</div>
+                            <div class="step-body">
+                                <h6>Gemini 圖片生成 — 比 ChatGPT 做圖更強</h6>
+                                <p>按「生成圖片」按鈕就能做圖。五個口訣：<strong>主體、構圖、動作、場景、風格</strong>。可以無中生有，也可以丟圖片修改（換顏色、換材質、合成場景）。如果 AI 不給圖就多講幾遍，或開新對話重來。</p>
+                                <span class="tool-tag">圖片生成</span> <span class="tool-tag">產品修圖</span> <span class="tool-tag">空間模擬</span>
+                            </div>
+                        </div>
+
+                        <div class="tool-step">
+                            <div class="step-num">3</div>
+                            <div class="step-body">
+                                <h6>引導式學習 — Gemini Gem 產品知識學習</h6>
+                                <p>孟學已經把展晟的產品資料上傳到 Gem 中，AI 只會根據上傳的資料回答。你可以問產品知識、請 AI 出考題、甚至讓 AI 扮演奧客來練習應對話術。</p>
+                                <span class="tool-tag">產品學習</span> <span class="tool-tag">模擬考試</span> <span class="tool-tag">情境練習</span>
+                            </div>
+                        </div>
+
+                        <div class="tool-step">
+                            <div class="step-num">4</div>
+                            <div class="step-body">
+                                <h6>NotebookLM — Google 筆記本 AI（不會胡說八道）</h6>
+                                <p>上傳 PDF、Word、錄音檔、YouTube 影片等資料，AI 只根據你給的資料回答。最厲害的是右邊 9 個按鈕：心智圖、簡報、語音摘要、資訊圖表全部幫你做。簡報約 10 分鐘生成。</p>
+                                <span class="tool-tag">簡報生成</span> <span class="tool-tag">心智圖</span> <span class="tool-tag">語音摘要</span> <span class="tool-tag">Podcast</span>
+                            </div>
+                        </div>
+
+                        <div class="tool-step">
+                            <div class="step-num">5</div>
+                            <div class="step-body">
+                                <h6>Gemini / Claude OCR — 圖片轉 Excel</h6>
+                                <p>拍照或截圖丟給 AI，請它「把圖片的文字製作成表格」。手寫筆記、報價單、海報文字都能辨識。Gemini 可以一鍵開啟 Google 試算表，Claude 會直接給你下載檔案。</p>
+                                <span class="tool-tag">OCR 辨識</span> <span class="tool-tag">圖轉表格</span>
+                            </div>
+                        </div>
+
+                        <div class="tool-step">
+                            <div class="step-num">6</div>
+                            <div class="step-body">
+                                <h6>Gemini Canvas + Manus — AI 寫程式做系統</h6>
+                                <p>Gemini 的 Canvas 功能讓 AI 幫你寫程式語言，做出互動網頁、小遊戲、進度追蹤表。可以用「圈取與詢問」直接圈畫面跟 AI 溝通修改。Manus 則可以建立有後台資料庫的完整系統。</p>
+                                <span class="tool-tag">網頁製作</span> <span class="tool-tag">系統開發</span> <span class="tool-tag">互動遊戲</span>
+                            </div>
+                        </div>
+
+                        <div class="summary-divider"></div>
+
+                        <!-- 金句精選 -->
+                        <h6 style="color:var(--brand-navy);font-weight:700;margin-bottom:12px;"><i class="bi bi-chat-quote me-2" style="color:var(--brand-orange);"></i>阿峰老師金句精選</h6>
+
+                        <div class="quote-card">
+                            <div class="quote-text">「花時間用 AI，比花錢用 AI 更重要。」</div>
+                            <div class="quote-note">讓公司團隊有 AI 的文化、大家願意用 AI，比花錢買帳號更重要。不然 800 人只有 20% 在用，一年就浪費 400 萬。</div>
+                        </div>
+                        <div class="quote-card">
+                            <div class="quote-text">「一般人使用 AI 的能力，就跟你阿嬤一樣。」</div>
+                            <div class="quote-note">iPhone 17 Pro Max 跟 OPPO 5K 手機在阿嬤手上沒差別，都只會接電話傳 LINE。AI 工具也一樣，重點不是工具多貴，是你會不會用。</div>
+                        </div>
+                        <div class="quote-card">
+                            <div class="quote-text">「AI 不會罵你、不會笑你，半夜叫 AI 做事也不會去勞工局檢舉你。」</div>
+                            <div class="quote-note">使用 AI 最不要擔心犯錯。出社會的人被社會化過最怕犯錯，但 AI 永遠說你很棒。所以放膽去試！</div>
+                        </div>
+                        <div class="quote-card">
+                            <div class="quote-text">「不知道答案的、不確定答案的、不想驗證答案的，你不要問 AI。」</div>
+                            <div class="quote-note">大型語言模型的特性：一本正經的胡說八道。如果你夠專業看得出錯，那問 AI 沒問題；但要交給客戶或老闆的，務必自己確認。</div>
+                        </div>
+                        <div class="quote-card">
+                            <div class="quote-text">「AI 不是取代人，是加速你跟更專業的人做溝通。」</div>
+                            <div class="quote-note">你不需要了解過程，只要了解結果是不是你要的。先用 AI 做出 80%，最後 20% 交給專業的人，省時省錢。</div>
+                        </div>
+                        <div class="quote-card">
+                            <div class="quote-text">「你看別人怎麼用 AI，學習他的思維，這比自己埋頭苦幹更重要。」</div>
+                            <div class="quote-note">就像 Google 剛出來時很多人不會用，但聽到別人的用法就學會了。在小組裡討論、分享，就是這個道理。</div>
+                        </div>
+                        <div class="quote-card">
+                            <div class="quote-text">「創意很重要，執行力也很重要。AI 的學習力就是你未來的競爭力。」</div>
+                            <div class="quote-note">AI 工具人人都能用，差別在於你有沒有創意去應用它。今天不到四小時你已經學了六個 AI 工具，這就是你的競爭力。</div>
+                        </div>
+
+                        <div class="summary-divider"></div>
+
+                        <!-- 注意事項 -->
+                        <div class="key-concept">
+                            <h6><i class="bi bi-shield-check me-2"></i>使用 AI 的注意事項</h6>
+                            <ul>
+                                <li>不要隨便把公司機密、財務、客戶資料上傳到 AI，要放一定先問過主管</li>
+                                <li>AI 生成的圖片目前最高 1K 解析度（免費版），要印刷品質需用 Google AI Studio（4K）</li>
+                                <li>使用名人照片做 AI 合成有版權問題，建議用 AI 生成的人物替代</li>
+                                <li>手寫辨識前提是字要寫方正，連人類都看不懂的 AI 也沒辦法</li>
+                                <li>AI 做出的內容送出前一定要自己確認，因為 AI 不會幫你負責任</li>
+                                <li>刷卡訂閱 AI 工具後建議馬上取消自動續訂，先用一個月蜜月期體驗</li>
+                            </ul>
+                        </div>
+
+                        <!-- 學習四階段 -->
+                        <div class="key-concept">
+                            <h6><i class="bi bi-bar-chart-steps me-2"></i>AI 學習四階段：識 → 用 → 做 → 管</h6>
+                            <ul>
+                                <li><strong style="color:var(--brand-gold);">識 AI</strong> — 認識 AI 是什麼、能做什麼</li>
+                                <li><strong style="color:var(--brand-gold);">用 AI</strong> — 學會使用不同 AI 工具（今天你在這裡！）</li>
+                                <li><strong style="color:var(--brand-gold);">做 AI</strong> — 把不同 AI 串在一起，建立自己的 AI 工作流</li>
+                                <li><strong style="color:var(--brand-gold);">管 AI</strong> — 讓 AI 自動幫你處理日常工作，你只做決策</li>
+                            </ul>
+                        </div>
+
                     </div>
                 </div>
 
